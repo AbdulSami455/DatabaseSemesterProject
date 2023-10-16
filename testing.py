@@ -93,5 +93,5 @@ def monthlydata(API_KEY):
     else:
         print("Max retries exceeded. Unable to establish a connection.")
 #Intraday(API_KEY)
-#companyoverview(API_KEY)
+companyoverview(API_KEY)
 #monthlydata(API_KEY)
