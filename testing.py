@@ -5,7 +5,7 @@ from requests.exceptions import ConnectionError
 import time
 API_KEY="WQW9CPLA6FXJPS55"
 
-
+#Dailt Stats about
 def Daily_Data(API_KEY):
 #Intraday Stock Prices
  url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=IBM&apikey={API_KEY}"
@@ -28,9 +28,9 @@ def Daily_Data(API_KEY):
  else:
     print("Max retries exceeded. Unable to establish a connection.")
 
-def Intraday():
+def Intraday(API_KEY):
 #Intraday Stock Prices
- url = "https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=IBM&apikey=WQW9CPLA6FXJPS55"
+ url = "https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=IBM&apikey={API_KEY}"
 
 
 #To Establish Connections _Use of Retries and Delay
@@ -42,7 +42,7 @@ def Intraday():
         r = requests.get(url)
         r.raise_for_status()  # Check for HTTP status code errors
         data=r.json()
-        print(data)
+        print(data["Global Quote"]["05. price"])
         break  # If successful, exit the loop
     except ConnectionError:
         print("ConnectionError. Retrying in {} seconds...".format(retry_delay))
@@ -50,4 +50,4 @@ def Intraday():
  else:
     print("Max retries exceeded. Unable to establish a connection.")
 
-Intraday();
+Intraday(API_KEY);
