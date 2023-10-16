@@ -5,7 +5,7 @@ from requests.exceptions import ConnectionError
 import time
 API_KEY="WQW9CPLA6FXJPS55"
 
-#Dailt Stats about
+#Daily Stats about
 def Daily_Data(API_KEY):
 #Intraday Stock Prices
  url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=IBM&apikey={API_KEY}"
@@ -27,9 +27,10 @@ def Daily_Data(API_KEY):
         time.sleep(retry_delay)
  else:
     print("Max retries exceeded. Unable to establish a connection.")
-
-def Intraday(API_KEY):
 #Intraday Stock Prices
+#Intraday Stock Prices
+def Intraday(API_KEY):
+
  url = "https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=IBM&apikey={API_KEY}"
 
 
