@@ -5,7 +5,7 @@ from requests.exceptions import ConnectionError
 import time
 API_KEY="WQW9CPLA6FXJPS55"
 
-#Daily Stats about
+#Daily Stats about stocks
 def Daily_Data(API_KEY):
 #Intraday Stock Prices
  url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=IBM&apikey={API_KEY}"
