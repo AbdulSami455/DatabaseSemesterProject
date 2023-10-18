@@ -132,7 +132,7 @@ def earnings(API_KEY):
             time.sleep(retry_delay)
     else:
         print("Max retries exceeded. Unable to establish a connection.")
-#Intraday(API_KEY)
+Intraday(API_KEY)
 #companyoverview(API_KEY)
 #monthlydata(API_KEY)
 #gainlosers(API_KEY)
