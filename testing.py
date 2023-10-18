@@ -136,4 +136,4 @@ def earnings(API_KEY):
 #companyoverview(API_KEY)
 #monthlydata(API_KEY)
 #gainlosers(API_KEY)
-earnings(API_KEY)
+#earnings(API_KEY)
