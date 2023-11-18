@@ -2,7 +2,7 @@ import mysql.connector
 
 # Replace these values with your MySQL server details
 host = '54.152.118.196'
-user = 'sami'
+user = 'theuser'
 password ='Thepassword@1234'
 database = 'sami'
 
