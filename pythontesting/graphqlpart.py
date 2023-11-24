@@ -18,6 +18,7 @@ class Query:
         ]
         return movies_data
 
+
 schema = strawberry.Schema(query=Query)
 
 app = FastAPI()
