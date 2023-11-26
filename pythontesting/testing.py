@@ -20,11 +20,11 @@ def Daily_Data(API_KEY):
         r = requests.get(url)
         r.raise_for_status()  # Check for HTTP status code errors
         data=r.json()
-        print(data)
+        print(data['Time Series (Daily)']['2023-11-24']['1. open'])
         break  # If successful, exit the loop
     except ConnectionError:
         print("ConnectionError. Retrying in {} seconds...".format(retry_delay))
-        time.sleep(retry_delay)
+    +    time.sleep(retry_delay)
  else:
     print("Max retries exceeded. Unable to establish a connection.")
 
@@ -132,8 +132,10 @@ def earnings(API_KEY):
             time.sleep(retry_delay)
     else:
         print("Max retries exceeded. Unable to establish a connection.")
-        
-Intraday(API_KEY)
+
+
+Daily_Data(API_KEY)
+#Intraday(API_KEY)
 #companyoverview(API_KEY)
 #monthlydata(API_KEY)
 #gainlosers(API_KEY)
