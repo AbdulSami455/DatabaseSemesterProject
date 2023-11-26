@@ -1,10 +1,10 @@
 import mysql.connector
 
 # Replace these values with your MySQL server details
-host = '54.152.118.196'
-user = 'theuser'
-password ='Thepassword@1234'
-database = 'sami'
+host = '18.205.31.181'
+user = 'thesami'
+password ='Thesami@1234'
+database = 'mysql'
 
 try:
     conn = mysql.connector.connect(
