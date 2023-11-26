@@ -1,32 +1,35 @@
 import mysql.connector
 
 # Replace these values with your MySQL server details
-host = '18.205.31.181'
-user = 'thesami'
-password ='Thesami@1234'
-database = 'mysql'
+'''host = '18.205.31.181'
+user = 'sami1'
+password = 'Sami@1234'
+database = 'sami'
+'''
+def connection():
+ host = '18.205.31.181'
+ user = 'sami1'
+ password = 'Sami@1234'
+ database = 'sami'
 
-try:
+
+ try:
     conn = mysql.connector.connect(
         host=host,
         user=user,
         password=password,
-        database=database
+        database=database,
     )
 
-    cursor = conn.cursor()
-    cursor.execute("SHOW DATABASES")
-    databases = cursor.fetchall()
-    print("Databases:")
-    for db in databases:
-        print(db[0])
+    return  conn.is_connected()
 
-except mysql.connector.Error as err:
+
+        # Your database operations go here
+
+ except mysql.connector.Error as err:
     print(f"Error: {err}")
-finally:
-    if 'cursor' in locals():
-        cursor.close()
-    if 'conn' in locals():
-        conn.close()
 
-
+if connection():
+    print("Connected")
+else:
+    print("Error")
