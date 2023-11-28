@@ -7,10 +7,10 @@ password = 'Sami@1234'
 database = 'sami'
 '''
 def connection():
- host = '18.205.31.181'
+ host = '3.85.167.11'
  user = 'sami1'
  password = 'Sami@1234'
- database = 'sami'
+ database = 'Investio'
 
 
  try:
