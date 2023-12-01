@@ -6,8 +6,8 @@ user = 'sami1'
 password = 'Sami@1234'
 database = 'sami'
 '''
-def connection():
- host = '3.85.167.11'
+def connectionstatus():
+ host = '54.147.159.248'
  user = 'sami1'
  password = 'Sami@1234'
  database = 'Investio'
@@ -29,7 +29,16 @@ def connection():
  except mysql.connector.Error as err:
     print(f"Error: {err}")
 
-if connection():
-    print("Connected")
-else:
-    print("Error")
+def connection():
+    host = '54.147.159.248'
+    user = 'sami1'
+    password = 'Sami@1234'
+    database = 'Investio'
+    conn = mysql.connector.connect(
+        host=host,
+        user=user,
+        password=password,
+        database=database,
+    )
+    return conn
+
