@@ -17,6 +17,7 @@ tables=cursor.fetchall()
 for table in tables:
     print(table)
 '''
+'''
 def create_user(username, password):
     try:
         conn = connection()
@@ -27,6 +28,8 @@ def create_user(username, password):
                 # Insert into Users table
                 cursor.execute("INSERT INTO Users (Userid, Walletid) VALUES (2, 2);")
                 # Commit the changes
+
+                return 1
                 conn.commit()
     except pymysql.Error as e:
         print(f"Error: {e}")
@@ -36,6 +39,22 @@ def create_user(username, password):
             cursor.close()
         if conn:
             conn.close()
-
+'''
 # Call the function
-create_user('sami', 'sami@1234')
+def username(username,password):
+    if username =='sami' and password =='sami1234':
+        return 1
+    else:
+        return 0
+
+def tablefill(a):
+    try:
+        conn = connection()
+
+        cursor.execute("INSERT INTO Wallet (Walletid) VALUES (1);")
+    # Insert into Users table
+        cursor.execute("INSERT INTO Users (Userid, Walletid) VALUES (1, 1);")
+        conn.commit()
+    except pymysql.Error as e:
+        print(f"Error: {e}")
+

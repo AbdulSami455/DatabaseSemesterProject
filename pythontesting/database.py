@@ -30,7 +30,7 @@ def connectionstatus():
     print(f"Error: {err}")
 
 def connection():
-    host = '54.147.159.248'
+    host = '54.161.15.166'
     user = 'sami1'
     password = 'Sami@1234'
     database = 'Investio'
