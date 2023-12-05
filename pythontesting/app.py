@@ -49,7 +49,7 @@ def username(username,password):
     else:
         return 0
 
-#FIll table according to Username and Password
+#FIll table according.
 def tablefill():
     try:
         conn = connection()
