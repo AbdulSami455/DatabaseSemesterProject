@@ -6,9 +6,9 @@ import time
 API_KEY="WQW9CPLA6FXJPS55"
 
 #Daily Stats about stocks
-def Daily_Data(API_KEY):
+def Daily_Data(API_KEY,symbol):
 #Intraday Stock Prices
- url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=IBM&apikey={API_KEY}"
+ url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={symbol}&apikey={API_KEY}"
 
 
 #To Establish Connections _Use of Retries and Delay
@@ -134,7 +134,9 @@ def earnings(API_KEY):
         print("Max retries exceeded. Unable to establish a connection.")
 
 
-Daily_Data(API_KEY)
+Daily_Data(API_KEY,"IBM")
+Daily_Data(API_KEY,"AAPL")
+
 #Intraday(API_KEY)
 #companyoverview(API_KEY)
 #monthlydata(API_KEY)
